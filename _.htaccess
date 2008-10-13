@@ -1,0 +1,12 @@
+RewriteEngine On
+
+RewriteRule ^services$ rest.php
+RewriteRule ^services/.*$ rest.php
+
+RewriteRule ^typo3/services$ typo3/rest.php
+RewriteRule ^typo3/services/.*$ typo3/rest.php
+
+# PUT and DELETE support
+# (possibly not necesary, PHP 5.2 supports GET/PUT/POST/DELETE _without_ 'Script' and as 'hander')
+# Script PUT /typo3/rest.php
+# Script DELETE /typo3/rest.php

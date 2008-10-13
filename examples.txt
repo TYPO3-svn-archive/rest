@@ -1,0 +1,23 @@
+
+
+
+
+	Prerequisites:
+
+	- the BE uses RFC2617, which is the standard HTTP-authentication with digest
+	- the FE uses HTTP-authentication with username:password
+
+	Notes:
+
+	- the FE will not report that you don't use (a valid) user for authentification.
+	  that is because a lot of the services available through the FE don't even need
+	  authentification (modification methods like PUT/POST/DELETE do bounce though).
+
+	1. Using the CURL command-line tool
+
+		You can use the BE with digest this way:
+		$ curl -S --request GET --digest --user username:password http://domain.tld/typo3/services/
+		You can use the FE this way:
+		$ curl -S --request GET --user username:password http://domain.tld/services/
+
+	1.1
